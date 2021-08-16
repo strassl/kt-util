@@ -13,3 +13,6 @@ fun <K, R> PluralFunction<K, R>.singular(defaultValue: (() -> R)? = null): Singu
 
 val <K, R> PluralFunction<K, R>.singular: SingularFunction<K, R>
     get() = this.singular(null)
+
+val <K, R> PluralFunction<K, R>.singularNullable: SingularFunction<K, R?>
+    get() = this.singular { null }
